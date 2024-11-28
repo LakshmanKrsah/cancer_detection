@@ -1,5 +1,5 @@
 import sys
-import logging
+from src.logger import logging
 
 # Configure logging
 logging.basicConfig(
@@ -35,12 +35,12 @@ class CustomException(Exception):
         '''
         return self.error_message
 
-'''
-if __name__ == "__main__":
-    try:
-        a = 1 / 0
-    except Exception as e:
-        logging.info("Devide by Zero error")  # Log a generic info message
-        logging.error(str(CustomException(e, sys)))  # Log the detailed custom exception
-        raise CustomException(e, sys)  # Raise the custom exception
-'''
+# '''
+# if __name__ == "__main__":
+#     try:
+#         a = 1 / 0
+#     except Exception as e:
+#         logging.info("Devide by Zero error")  # Log a generic info message
+#         logging.error(str(CustomException(e, sys)))  # Log the detailed custom exception
+#         raise CustomException(e, sys)  # Raise the custom exception
+# '''
